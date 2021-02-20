@@ -110,7 +110,7 @@ public class Project4Test {
 
         String[] votes2 = { "C", "B", "B", "A", "B", "C", "C", "A", "B", "A", "B", "C", "A", "A", "B", "C", "A", "B"};
         String res2 = listSorter.sortAndFindWinner(votes2);
-        Assert.assertEquals("The winner for the array votes2  was supposed to be \"B\".", "B", res);
+        Assert.assertEquals("The winner for the array votes2  was supposed to be \"B\".", "B", res2);
     }
 
     @Test
