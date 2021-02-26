@@ -13,7 +13,7 @@ import java.util.Random;
 /** Test file for Project 2, sorting.
  * Provides only the most basic testing.
  * You are responsible for thoroughly testing your code on your own. */
-public class Project4Test {
+public class Project2Test {
     public final static int NUM_ITERS = 10; // how many times to test it
     public final static int SIZE = 32; // number of elements in the list
     public final static String INPUT_FILE = "inputFile";
@@ -144,6 +144,8 @@ public class Project4Test {
                 }
                 num = nextNum;
             }
+            if (lineNum == 0)
+                Assert.fail("Sorted file is empty");
             // Delete temp files
             for (int i = 0; i < 100; i++) {
                 Files.deleteIfExists(Paths.get("temp" + i + ".txt"));
@@ -157,6 +159,7 @@ public class Project4Test {
             Assert.fail();
         }
     }
+
 
     /** Helper method for bucket sort.
      * Checks if the subarray (from startIndex to endIndex)
